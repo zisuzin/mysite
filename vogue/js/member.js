@@ -310,7 +310,10 @@ $(() => {
         console.log("통과여부:", pass);
 
         // 4. 검사결과에 따라 메시지 보이기
-        if(pass){ // 통과시 ////
+        if(pass){ // 통과시 //
+            $(".logF").submit();
+            // submit() - 폼요소를 서브밋해주는 메서드
+
             // 원래는 post방식으로 DB에 회원가입정보를
             // 전송하여 입력후 DB처리완료시 성공메시지나
             // 로그인 페이지로 넘겨준다!
@@ -321,7 +324,7 @@ $(() => {
 
             // 브라우저 캐싱 히스토리를 지우려면
             // location.replace(url)을 사용한다! 
-            location.replace("login.html");
+            // location.replace("login.html");
 
         } /////////// if : 통과시 /////////
         else{ // 불통과시 /////
