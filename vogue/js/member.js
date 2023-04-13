@@ -138,7 +138,7 @@ $(() => {
                 
                 // 2. 이메일 검사함수 호출하기!
                 resEml(comp);
-            } ///////////// else if : 비밀번호확인검사시 ///////////
+            } ///////////// else if : 이메일 유효성 검사하기 ///////////
 
             /////// 모두 통과일 경우 메시지 지우기 ///////
             else {
@@ -256,10 +256,12 @@ $(() => {
 
         // 이메일 정규식검사에 따른 메시지 보이기
         if (vReg(comp, "eml")) {
-            eml1.siblings(".msg").text("적합한 이메일 형식입니다!").addClass("on");
+            eml1.siblings(".msg")
+            .text("적합한 이메일 형식입니다!").addClass("on");
         } //////// if : 통과시 ///////
         else {
-            eml1.siblings(".msg").text("맞지않는 이메일 형식입니다!").removeClass("on");
+            eml1.siblings(".msg")
+            .text("맞지않는 이메일 형식입니다!").removeClass("on");
 
             // 불통과!
             pass = false;
@@ -308,20 +310,27 @@ $(() => {
         console.log("통과여부:", pass);
 
         // 4. 검사결과에 따라 메시지 보이기
-        if(pass) {
-            // 원래는 post방식으로 DB에 회원가입정보를 
-            // 전송하여 입력후 DB처리완료시 성공메시지나 
+        if(pass){ // 통과시 ////
+            // 원래는 post방식으로 DB에 회원가입정보를
+            // 전송하여 입력후 DB처리완료시 성공메시지나
             // 로그인 페이지로 넘겨준다!
-            alert("회원가입을 축하드립니다! 짝짝짝!");
+            alert("회원가입을 축하드립니다! 짝짝짝!!!");
+
             // 로그인페이지로 리디렉션!
-            location.href = "login.html";
+            // location.href = "login.html";
+
             // 브라우저 캐싱 히스토리를 지우려면
-            // replace.replace(url)을 사용한다!
-            // location.replace("login.html");
-        } // if : 통과시 
-        else {
+            // location.replace(url)을 사용한다! 
+            location.replace("login.html");
+
+        } /////////// if : 통과시 /////////
+        else{ // 불통과시 /////
             alert("입력을 수정하세요~!");
-        } // else : 불통과시 
+        } /////////// else : 불통과시 ////////
+
+
+
+
     }); /////////// click ///////////
 }); /////////// jQB /////////////////////
 
