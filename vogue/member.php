@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css" />
         <!-- 외부CSS넣기 -->
         <link rel="stylesheet" href="./css/member.css" />
+        <!-- 미디어쿼리CSS넣기 -->
+        <link rel="stylesheet" href="./css/media.css" />
 
         <!-- 제이쿼리 라이브러리+UI -->
         <script src="./js/jquery-3.6.1.min.js"></script>
@@ -183,6 +185,7 @@
                                 </select>
                                 <span class="msg"></span>
                             </li>
+                            <!-- 이메일 뒷주소 직접입력 -->
                             <li>
                                 <label for="email2"></label>
                                 <input type="text" name="email2" id="email2" placeholder="이메일뒷주소" />
