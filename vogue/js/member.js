@@ -25,9 +25,12 @@ $(() => {
    input[type=password]`)
         // .on("blur",function(){
         .blur(function () {
-            // 0. 공백제거처리함수
+            // 0. 공백데이터 처리함수
             // get rid of space -> 공백을 제거하라!
-            const groSpace = (cv) => cv.replace(/\s/g, "");
+            // const groSpace = (cv) => cv.replace(/\s/g, "");
+
+            console.log("아이디:",groSpace(mid.val().trim()));
+            console.log("비번:",groSpace(mpw.val().trim()));
             // 원형 : (cv) => {return cv.replace(/\s/g,"")}
             // 정규식 : 슬래쉬(/) 사이에 표현, \s 스페이스문자
             // 정규식 참고 -> https://www.w3schools.com/jsref/jsref_obj_regexp.asp
