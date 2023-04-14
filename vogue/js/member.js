@@ -454,7 +454,7 @@ $(() => {
             // location.href = "login.html";
 
             // 브라우저 캐싱 히스토리를 지우려면
-            // location.replace(url)을 사용한다! 
+            // location.replace(url)을 사용한다!
             // location.replace("login.html");
 
         } /////////// if : 통과시 /////////
