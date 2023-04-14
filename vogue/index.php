@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css" />
         <!-- 외부CSS넣기 -->
         <link rel="stylesheet" href="./css/main.css" />
-        <!-- 미디어쿼리CSS넣기 -->
+        <!-- 미디어쿼리CSS logout넣기 -->
         <link rel="stylesheet" href="./css/media.css" />
 
         <!-- 제이쿼리 라이브러리+UI -->
@@ -30,6 +30,8 @@
         <script src="./js/main.js"></script>
     </head>
     <body>
+        <!-- 로그인 세션처리 인클루드 -->
+        <?php include "./inc/login_session.inc" ?>
         <!-- 1.상단영역 -->
         <!-- #top.on인 경우 슬림상단 디자인 적용 -->
         <div id="top">

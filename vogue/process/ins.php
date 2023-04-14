@@ -26,13 +26,13 @@ $email2 = $_POST["email2"];
 // 암호화된 비밀번호로 변환하여 다시 할당!
 $mpw = password_hash($mpw, PASSWORD_DEFAULT);
 
-echo "1.아이디 : $mid<br>";
-echo "2.비번 : $mpw<br>";
-echo "3.이름 : $mnm<br>";
-echo "4.성별 : $gen<br>";
-echo "5-1.이멜앞 : $email1<br>";
-echo "5-2.이멜뒷 : $seleml<br>";
-echo "5-3.직접입력 : $email2<br>";
+// echo "1.아이디 : $mid<br>";
+// echo "2.비번 : $mpw<br>";
+// echo "3.이름 : $mnm<br>";
+// echo "4.성별 : $gen<br>";
+// echo "5-1.이멜앞 : $email1<br>";
+// echo "5-2.이멜뒷 : $seleml<br>";
+// echo "5-3.직접입력 : $email2<br>";
 
 /// 이메일 뒷주소 정하기 ///
 $emailback;// 최종결정 이메일 뒷주소
@@ -61,13 +61,13 @@ include "dbcon.inc";
 // query() 메서드는 쿼리를 DB에 실행후 결과를 가져옴!
 $insSts = $conn->query($sql);
 
-// 결과가 나온경우 처리 //
+// 결과가 나온경우 처리 ///////////
 if($insSts){
     echo "ok";
-} // if문 //
-else{ // 에러가 난 경우 처리 //
+} ///////// if문 ///////////////////////
+else{ // 에러가 난 경우 처리 ///////
     echo "error:".$conn->error;
-} // else문 //
+} ////////// else문 /////////////////////
 
 // 보통 페이지가 종료되면 자동으로 연결을 끊어주지만
 // 연결을 종료하는 메서드가 있기에 이를 호출해도 된다!
