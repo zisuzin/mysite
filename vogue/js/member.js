@@ -88,7 +88,14 @@ $(() => {
                         - $.get(URL,callback)
 
                         3) 위의 2가지 유형 중 선택처리 메서드
-                        - $.ajax({전송할페이지,전송방식,보낼데이터,전송할데이터타입,비동기옵션,성공처리,실패처리})
+                        - $.ajax({
+                            전송할페이지,
+                            전송방식,
+                            보낼데이터,
+                            전송할데이터타입,
+                            비동기옵션,
+                            성공처리,
+                            실패처리})
                         -> 보내는 값은 하나! 객체데이터임!
                         객체 안에 7가지 유형의 데이터를 보냄!
                     */
@@ -111,20 +118,25 @@ $(() => {
                         // 처리할때 동기화해야하기때문!
                         async:false,
                         // 6.성공처리
-                        success:function(res){ // res - 결과값리턴
+                        success:function(res){ 
+                            // res - 결과값리턴
                             console.log(res);
                             if(res==="ok"){
-                                $("#mid").siblings(".msg").text("멋진 아이디네요!").addClass("on");
+                                $("#mid").siblings(".msg")
+                                .text("멋진 아이디네요!")
+                                .addClass("on");
                             } /// ok /////
                             else{ /// 아이디 중복시
-                                $("#mid").siblings(".msg").text("사용중인ID입니다!").removeClass("on");
+                                $("#mid").siblings(".msg")
+                                .text("사용중인ID입니다!")
+                                .removeClass("on");
 
                                 // 불통과처리 
                                 //-> pass변수사용이유로 
                                 // async:fasle 옵션사용함!
                                 pass = false;
 
-                                console.log("내부pass:",pass)
+                                console.log("내부pass:",pass);
                             } //// else //////
                         }, //// success ///
                         // 7.실패처리
@@ -166,8 +178,8 @@ $(() => {
                     // 통과시
                     // 메시지 지우기
                     $(this).siblings(".msg").empty();
-                } /// else ///
-            } /// else if : 비밀번호검사시 ///
+                } /// else ////
+            } ///////////// else if : 비밀번호검사시 ///////////
 
             /***************************************************** 
                 6. 비밀번호확인일 경우 유효성 검사
@@ -373,7 +385,7 @@ $(() => {
         console.log("통과여부:", pass);
 
         // 4. 검사결과에 따라 메시지 보이기
-        if(pass){ // 통과시 ///
+        if(pass){ // 통과시 ////
 
              /* 
                 [ Ajax를 이용한 POST방식으로 DB에 데이터 입력하기! ]
@@ -442,7 +454,7 @@ $(() => {
             // location.href = "login.html";
 
             // 브라우저 캐싱 히스토리를 지우려면
-            // location.replace(url)을 사용한다! 
+            // location.replace(url)을 사용한다!
             // location.replace("login.html");
 
         } /////////// if : 통과시 /////////
